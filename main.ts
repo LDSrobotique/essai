@@ -3,7 +3,7 @@ namespace Event {
 export function onEvent(handler: () => void) {
    control.inBackground(function () {
        while(true) {
-           if (true) { handler (); }
+           if (input.buttonIsPressed(Button.A)) { handler (); }
            basic.pause(100);
        }
    })
